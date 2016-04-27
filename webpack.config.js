@@ -62,8 +62,7 @@ switch(process.env.npm_lifecycle_event) {
         entries: ['react', 'react-dom']
       }),
       parts.minify(),
-      parts.extractCSS(PATHS.style),
-      parts.purifyCSS([PATHS.app])
+      parts.extractCSS(PATHS.style)
     );
     break;
   default:
