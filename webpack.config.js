@@ -76,14 +76,10 @@ switch(process.env.npm_lifecycle_event) {
         // Customize host/port here if needed
         host: process.env.HOST,
         port: process.env.PORT
-      })
-      /*
-      XXXXX: broken in v3.1.0
-      https://github.com/ericclemmons/npm-install-webpack-plugin/issues/43
-      ,parts.npmInstall({
+      }),
+      parts.npmInstall({
         save: true
       })
-      */
     );
 }
 
