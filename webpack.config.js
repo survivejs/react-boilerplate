@@ -32,7 +32,8 @@ const common = merge({
     title: 'Kanban demo',
     appMountId: 'app'
   }),
-  parts.loadJSX(PATHS.app)
+  parts.loadJSX(PATHS.app),
+  parts.lintJSX(PATHS.app)
 );
 
 var config;
