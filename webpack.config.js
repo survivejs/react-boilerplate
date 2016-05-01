@@ -4,6 +4,7 @@ const validate = require('webpack-validator');
 
 const parts = require('./lib/parts');
 
+const ENABLE_POLLING = process.env.ENABLE_POLLING;
 const PATHS = {
   app: path.join(__dirname, 'app'),
   style: [
@@ -75,7 +76,8 @@ switch(process.env.npm_lifecycle_event) {
       parts.devServer({
         // Customize host/port here if needed
         host: process.env.HOST,
-        port: process.env.PORT
+        port: process.env.PORT,
+        poll: ENABLE_POLLING
       }),
       parts.npmInstall({
         save: true
