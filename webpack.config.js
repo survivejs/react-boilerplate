@@ -91,6 +91,7 @@ switch(process.env.npm_lifecycle_event) {
         port: process.env.PORT,
         poll: ENABLE_POLLING
       }),
+      parts.enableReactPerformanceTools(),
       parts.npmInstall({
         save: true
       })
