@@ -4,6 +4,7 @@ const validate = require('webpack-validator');
 
 const parts = require('./lib/parts');
 
+const TARGET = process.env.npm_lifecycle_event;
 const ENABLE_POLLING = process.env.ENABLE_POLLING;
 const PATHS = {
   app: path.join(__dirname, 'app'),
@@ -13,6 +14,8 @@ const PATHS = {
   build: path.join(__dirname, 'build'),
   test: path.join(__dirname, 'tests')
 };
+
+process.env.BABEL_ENV = TARGET;
 
 const common = merge({
     // Entry accepts a path or an object of entries.
@@ -41,7 +44,7 @@ const common = merge({
 var config;
 
 // Detect how npm is run and branch based on that
-switch(process.env.npm_lifecycle_event) {
+switch(TARGET) {
   case 'build':
   case 'stats':
     config = merge(
