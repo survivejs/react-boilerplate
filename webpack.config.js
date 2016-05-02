@@ -10,7 +10,8 @@ const PATHS = {
   style: [
     path.join(__dirname, 'app', 'main.css')
   ],
-  build: path.join(__dirname, 'build')
+  build: path.join(__dirname, 'build'),
+  test: path.join(__dirname, 'tests')
 };
 
 const common = merge({
@@ -64,6 +65,17 @@ switch(process.env.npm_lifecycle_event) {
       }),
       parts.minify(),
       parts.extractCSS(PATHS.style)
+    );
+    break;
+  case 'test':
+  case 'test:tdd':
+    config = merge(
+      common,
+      {
+        devtool: 'inline-source-map'
+      },
+      parts.loadIsparta(PATHS.app),
+      parts.loadJSX(PATHS.test)
     );
     break;
   default:
