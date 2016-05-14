@@ -13,7 +13,7 @@
   ],
   "rules": {
     "quotes": [2, "single"],
-    "display-name": 1,
-    "prop-types": 1
+    "display-name": 0,
+    "prop-types": 0
   }
 }
