@@ -1,7 +1,7 @@
 {
   "name": "react-boilerplate",
   "private": true,
-  "version": "2.5.0",
+  "version": "2.5.1",
   "description": "Boilerplate for [SurviveJS - React](http://survivejs.com/react/introduction/)",
   "scripts": {
     "stats": "webpack --profile --json > stats.json",
