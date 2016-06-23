@@ -30,7 +30,8 @@ module.exports = function karmaConfig (config) {
       // Reference: http://webpack.github.io/docs/testing.html
       // Reference: https://github.com/webpack/karma-webpack
       // Convert files with webpack and load sourcemaps
-      'tests/**/*_test.*': ['webpack', 'sourcemap', 'coverage']
+      'tests/**/*_test.*': ['webpack', 'sourcemap'],
+      'app/**/*.*': 'coverage'
     },
 
     browsers: [
