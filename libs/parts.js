@@ -38,7 +38,7 @@ exports.loadIsparta = function(include) {
       preLoaders: [
         {
           test: /\.(js|jsx)$/,
-          loaders: ['isparta-instrumenter'],
+          loaders: ['isparta'],
           include: include
         }
       ]
