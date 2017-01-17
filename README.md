@@ -2,6 +2,8 @@
 
 See [SurviveJS - React](http://survivejs.com/react/introduction/) for the book.
 
+> If you use Vagrant or Cloud9, you'll need to tweak the development server port as instructed in **webpack.parts.js**.
+
 ## Getting Started
 
 1. `npm i` - Install dependencies. This might take a while.
