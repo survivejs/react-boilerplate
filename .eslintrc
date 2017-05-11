@@ -13,6 +13,7 @@
   ],
   "rules": {
     "quotes": [2, "single"],
+    "no-debugger": 0,
     "no-console": 0,
     "no-unused-vars": 0,
     "react/display-name": 0,
